@@ -1,4 +1,6 @@
 #include "core.h"
+#include <chrono>
+#include <iostream>
 
 void testModel_1()
 {
@@ -103,6 +105,10 @@ void testModel_2()
 
 	// print relevant results
 	std::cout<<"TEST2 ::: DOF: "<<eqn.K.rows()<<",   Relative Error: "<<(eqn.K*eqn.d-eqn.f).norm()/eqn.f.norm()<<",   Elapsed Time: "<<dif/1e9<<" seconds\n";
+
+
+	std::cout<<eqn.K*eqn.d<<std::endl;
+
 }
 
 void testModel_3()
